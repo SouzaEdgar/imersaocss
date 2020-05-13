@@ -5,8 +5,13 @@
 }
 
 body {
-  background: slategrey;
+  background: slategrey
 }
+
+/*html {
+  background-image: url(../img/october-5-2019-goods-south-field.jpg);
+  background-size: cover;
+}  ESPERAR ATÉ ACHAR UMA IMAGEM LEGAL DE FUNDO*/
 
 /* Caso a tela tenha ao menos 400px ira ser carregado estes estilos*/
 @media (min-width: 400px) {
