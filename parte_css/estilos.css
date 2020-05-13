@@ -1,13 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: slategrey;
-  background-size: auto 100vh;
-  font-family: Arial;
+}
+
+/* Caso a tela tenha ao menos 400px ira ser carregado estes estilos*/
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu {
   background-color: white;
   border-radius: 1vh;
+  position: fixed;
+  width: 100vh; /*Trocando o vh por vw ele fica colado nos cantos*/
+  top: 0;
 }
 
 .menu ul {
@@ -19,25 +51,27 @@ body {
   list-style: none;
 }
 
-a {
-  color: darkblue;
+.menu a {
+  color: rgb(29, 82, 126);
+  display: block;
+  padding: 10px 20px;
   text-decoration: none;
-  font-size: 3vh;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-.site-subtitle,
 .site-title {
   color: whitesmoke;
   text-align: center;
+  font-size: 3em;
 }
 
-.site-title {
-  font-size: 7.5vh;
-}
 .site-subtitle {
+  color: azure;
   font-style: italic;
+  font-size: 2em;
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
 }
