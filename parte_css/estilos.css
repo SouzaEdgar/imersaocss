@@ -7,6 +7,7 @@ body {
 
 .menu {
   background-color: white;
+  border-radius: 1vh;
 }
 
 .menu ul {
@@ -21,6 +22,7 @@ body {
 a {
   color: darkblue;
   text-decoration: none;
+  font-size: 3vh;
 }
 
 a:hover {
@@ -33,6 +35,9 @@ a:hover {
   text-align: center;
 }
 
+.site-title {
+  font-size: 7.5vh;
+}
 .site-subtitle {
   font-style: italic;
 }
