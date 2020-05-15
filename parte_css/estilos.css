@@ -5,7 +5,7 @@
 }
 
 body {
-  background: slategrey
+  background: rgb(52, 52, 52);
 }
 
 /*html {
@@ -40,11 +40,13 @@ header {
 }
 
 .menu {
-  background-color: white;
-  border-radius: 1vh;
+  background-color: rgb(45, 45, 45);
+  border-radius: 1vw;
   position: fixed;
-  width: 100vh; /*Trocando o vh por vw ele fica colado nos cantos*/
+  width: 80vw; /*Trocando o vh por vw ele fica colado nos cantos*/
   top: 0;
+  justify-content: center;
+  z-index: 1;
 }
 
 .menu ul {
@@ -57,10 +59,31 @@ header {
 }
 
 .menu a {
-  color: rgb(29, 82, 126);
+  color: white;
   display: block;
   padding: 10px 20px;
   text-decoration: none;
+  font-size: 1em;
+  transition: backgound-color 1s;
+}
+
+.menu a:hover,
+.menu a:active {
+  background-color: whitesmoke;
+  color: rgb(40, 40, 40);
+}
+
+.titulo {
+  transform: scale(0.2) translatey(45vh);
+  opacity: 0;
+  animation: linear 2s Tituloanimation forwards;
+}
+
+@keyframes Tituloanimation{
+  100% {
+    transform: scale(1) translatey(0);
+    opacity: 1;
+  }
 }
 
 .site-title {
@@ -76,7 +99,71 @@ header {
   text-align: center;
 }
 
+.portfolio {
+  color: whitesmoke;
+  padding: 2em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  min-height: 100vh;
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 2em;
+  padding: 25px;
+}
+
+.portfolio .grid {
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 260px 260px;
+  background-color: rgb(45, 45, 45);
+  border-radius: 10vh;
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
 .img-portfolio {
-  height: 180px;
-  width: 180px;
+  height: 200px;
+  width: 220px;
+  border-radius: 1vw;
+  object-fit: cover;
+  transition: .5ms;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1200px) {
+  .img-portfolio {
+    height: 200px;
+    width: 240px;
+    border-radius: 1vw;
+  }
+}
+
+.contato .icons{
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2em;
+  color: whitesmoke;
+}
+
+.contato a {
+  color: rgb(32, 32, 32);
+  font-size: 4em;
+  transition: text-shadow .2ms;
+}
+
+.contato a:hover, 
+.contato a:active {
+  text-shadow: 5px 4px 5px rgb(40, 40, 40);
+  text-decoration: none;
 }
